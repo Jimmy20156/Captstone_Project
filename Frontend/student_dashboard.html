@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUCC Student Dashboard</title>
+  <link rel="stylesheet" href="/Frontend/styles/student_dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>CSUCC Capstone Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#proposal">Proposal</a></li>
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#messages">Messages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="card">
+      <h2>Dashboard</h2>
+      <p>Overview of project status, deadlines, and evaluation results.</p>
+      <ul>
+        <li>Project Status: <span class="status">On-going</span></li>
+        <li>Next Deadline: Sept 30, 2025</li>
+        <li>Evaluation Score: <span class="score">85%</span></li>
+      </ul>
+    </section>
+
+    <!-- Proposal Submission -->
+    <section id="proposal" class="card">
+      <h2>Project Proposal Submission</h2>
+      <form>
+        <input type="file" id="proposal-file" required>
+        <button type="button" onclick="uploadProposal()">Upload</button>
+      </form>
+      <p id="proposal-status"></p>
+    </section>
+
+    <!-- Progress Updates -->
+    <section id="progress" class="card">
+      <h2>Progress Updates</h2>
+      <ul>
+        <li>Chapter 1 - Submitted</li>
+        <li>Chapter 2 - Pending</li>
+        <li>Weekly Report - Due this Friday</li>
+      </ul>
+    </section>
+
+    <!-- Schedule & Defense -->
+    <section id="schedule" class="card">
+      <h2>Schedule & Defense Page</h2>
+      <p>Defense Schedule: <b>October 15, 2025 - 9:00 AM</b></p>
+    </section>
+
+    <!-- Evaluation Results -->
+    <section id="results" class="card">
+      <h2>Evaluation Results</h2>
+      <p>Scores: 85/100</p>
+      <p>Comments: Improve your related works section.</p>
+      <p>Feedback: Good progress overall.</p>
+    </section>
+
+    <!-- Communication -->
+    <section id="messages" class="card">
+      <h2>Communication / Messages</h2>
+      <textarea id="message-box" placeholder="Type your message to adviser..."></textarea>
+      <button type="button" onclick="sendMessage()">Send</button>
+      <div id="chat-log"></div>
+    </section>
+  </main>
+
+  <script src="/Frontend/script/student.js"></script>
+</body>
+</html>
