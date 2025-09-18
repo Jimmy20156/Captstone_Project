@@ -1,15 +1,96 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="{% static 'app/public/style.css' %}">
-    <script src="{% static 'app/script.js' %}"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUCC Capstone System</title>
+  <link rel="stylesheet" href="/Frontend/styles/style.css">
 </head>
 <body>
-    <h1>Test Hello World!</h1>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-signin">Sign in</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Unlock Your Project’s <br> Full Potential</h1>
+      <p>Manage, Collaborate and Evaluate with Ease</p>
+      <div class="buttons">
+        <a href="#" class="btn-primary">Explore Features</a>
+        <a href="#" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="/Frontend/images/collab.png" alt="Team collaborating">
+    </div>
+  </section>
+   <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="plan.png" alt="Plan Icon">
+        <h3>Plan</h3>
+        <p>Create and manage detailed project proposals, define objectives, and assign tasks to build a solid foundation for your capstone.</p>
+      </div>
+      <div class="feature-card">
+        <img src="track.png" alt="Track Icon">
+        <h3>Track</h3>
+        <p>Monitor real-time project progress, track milestones, and manage tasks to ensure your team stays on schedule.</p>
+      </div>
+      <div class="feature-card">
+        <img src="evaluate.png" alt="Evaluate Icon">
+        <h3>Evaluate</h3>
+        <p>Conduct comprehensive project evaluations using customizable rubrics and provide detailed, actionable feedback.</p>
+      </div>
+      <div class="feature-card">
+        <img src="report.png" alt="Report Icon">
+        <h3>Report</h3>
+        <p>Generate insightful reports on project performance, team contributions, and overall success for easy review and grading.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>CSUCC Capstone System</h3>
+        <p>A platform to manage, collaborate, and evaluate capstone projects with efficiency and ease.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@csucc.edu</p>
+        <p>Phone: +63 912 345 6789</p>
+        <div class="socials">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CSUCC Capstone System. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

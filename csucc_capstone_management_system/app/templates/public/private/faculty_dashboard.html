@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUCC Faculty Dashboard</title>
+  <link rel="stylesheet" href="/Frontend/styles/faculty.css">
+</head>
+<body>
+  <header>
+    <h1>CSUCC Capstone Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#monitoring">Monitoring</a></li>
+        <li><a href="#schedule">Scheduling</a></li>
+        <li><a href="#grading">Grading</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="card">
+      <h2>Dashboard</h2>
+      <p>List of Advisees, Project Progress, Pending Reviews</p>
+      <ul>
+        <li>Team A - Proposal Pending</li>
+        <li>Team B - Progress: Chapter 2</li>
+        <li>Team C - For Defense Scheduling</li>
+      </ul>
+    </section>
+
+    <!-- Project Review -->
+    <section id="review" class="card">
+      <h2>Project Review Page</h2>
+      <p>Approve/Reject proposals and provide feedback.</p>
+      <textarea id="review-feedback" placeholder="Enter feedback..."></textarea><br>
+      <button onclick="approveProposal()">Approve</button>
+      <button onclick="rejectProposal()">Reject</button>
+      <p id="review-status"></p>
+    </section>
+
+    <!-- Progress Monitoring -->
+    <section id="monitoring" class="card">
+      <h2>Progress Monitoring</h2>
+      <ul>
+        <li>Team A - Submitted Chapter 1 ✔</li>
+        <li>Team B - Revision Requested ❌</li>
+        <li>Team C - Deadline: Oct 10, 2025</li>
+      </ul>
+    </section>
+
+    <!-- Defense Scheduling -->
+    <section id="schedule" class="card">
+      <h2>Defense Scheduling</h2>
+      <form>
+        <label for="team">Select Team:</label>
+        <select id="team">
+          <option>Team A</option>
+          <option>Team B</option>
+          <option>Team C</option>
+        </select><br><br>
+        <label for="date">Defense Date:</label>
+        <input type="date" id="date"><br><br>
+        <button type="button" onclick="scheduleDefense()">Recommend</button>
+      </form>
+      <p id="schedule-status"></p>
+    </section>
+
+    <!-- Evaluation / Grading -->
+    <section id="grading" class="card">
+      <h2>Evaluation / Grading Page</h2>
+      <form>
+        <label for="score">Score (0-100):</label>
+        <input type="number" id="score" min="0" max="100"><br><br>
+        <textarea id="grading-comments" placeholder="Enter comments..."></textarea><br>
+        <button type="button" onclick="submitGrade()">Submit</button>
+      </form>
+      <p id="grade-status"></p>
+    </section>
+  </main>
+
+  <script src="/Frontend/script/faculty.js"></script>
+</body>
+</html>

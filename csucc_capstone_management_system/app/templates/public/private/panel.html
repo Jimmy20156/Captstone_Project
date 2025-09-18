@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUCC Panel Dashboard</title>
+  <link rel="stylesheet" href="/Frontend/styles/panel.css">
+</head>
+<body>
+  <header>
+    <h1>CSUCC Capstone Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#summary">Scoring Summary</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="card">
+      <h2>Dashboard</h2>
+      <p>List of Assigned Capstone Projects:</p>
+      <ul>
+        <li>Project 1 - Mobile Attendance System</li>
+        <li>Project 2 - Library Management System</li>
+        <li>Project 3 - Capstone Management & Evaluation System</li>
+      </ul>
+    </section>
+
+    <!-- Evaluation Page -->
+    <section id="evaluation" class="card">
+      <h2>Evaluation Page</h2>
+      <p>Structured Rubric (Proposal / Final Defense)</p>
+      <form>
+        <label>Content & Relevance (0-25):</label>
+        <input type="number" id="content" min="0" max="25"><br><br>
+
+        <label>Technical Quality (0-25):</label>
+        <input type="number" id="technical" min="0" max="25"><br><br>
+
+        <label>Presentation & Communication (0-25):</label>
+        <input type="number" id="presentation" min="0" max="25"><br><br>
+
+        <label>Overall Contribution (0-25):</label>
+        <input type="number" id="contribution" min="0" max="25"><br><br>
+
+        <button type="button" onclick="submitEvaluation()">Submit Evaluation</button>
+      </form>
+      <p id="evaluation-status"></p>
+    </section>
+
+    <!-- Feedback Page -->
+    <section id="feedback" class="card">
+      <h2>Comment / Feedback Page</h2>
+      <textarea id="panel-feedback" placeholder="Enter qualitative feedback..."></textarea><br>
+      <button onclick="submitFeedback()">Submit Feedback</button>
+      <p id="feedback-status"></p>
+    </section>
+
+    <!-- Scoring Summary -->
+    <section id="summary" class="card">
+      <h2>Scoring Summary</h2>
+      <ul id="scoring-history">
+        <li>No evaluations yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="/Frontend/script/panel.js"></script>
+</body>
+</html>
