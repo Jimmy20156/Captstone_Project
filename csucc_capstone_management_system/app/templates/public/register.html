@@ -6,11 +6,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSUCC Capstone Registration</title>
-  <link rel="stylesheet" href=" {% static '/app/public/styles/style.css'%}">
+  <link rel="stylesheet" href=" {% static '/app/public/styles/register.css'%}">
+  <link rel="stylesheet" href=" {% static '/app/public/styles/header.css'%}">
+
   
 
 </head>
 <body>
+
+  <header>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <a href="{% url 'login' %}" class="btn-signin">Login</a>
+  </header>
   <div class="login-container">
     <!-- Logo Section -->
     <div class="logo">

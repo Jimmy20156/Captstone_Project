@@ -15,7 +15,7 @@
     <div class="logo">CSUCC <span>Capstone System</span></div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="#">Features</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Support</a></li>
@@ -42,22 +42,22 @@
     <h2>Features</h2>
     <div class="features-grid">
       <div class="feature-card">
-        <img src="plan.png" alt="Plan Icon">
+        <img src="{% static 'app/public/icons/plan.png'%}" alt="Plan Icon">
         <h3>Plan</h3>
         <p>Create and manage detailed project proposals, define objectives, and assign tasks to build a solid foundation for your capstone.</p>
       </div>
       <div class="feature-card">
-        <img src="track.png" alt="Track Icon">
+        <img src="{% static 'app/public/icons/track.png'%}" alt="Track Icon">
         <h3>Track</h3>
         <p>Monitor real-time project progress, track milestones, and manage tasks to ensure your team stays on schedule.</p>
       </div>
       <div class="feature-card">
-        <img src="evaluate.png" alt="Evaluate Icon">
+        <img src="{% static 'app/public/icons/evaluate.png'%}" alt="Evaluate Icon">
         <h3>Evaluate</h3>
         <p>Conduct comprehensive project evaluations using customizable rubrics and provide detailed, actionable feedback.</p>
       </div>
       <div class="feature-card">
-        <img src="report.png" alt="Report Icon">
+        <img src="{% static 'app/public/icons/report.png'%}" alt="Report Icon">
         <h3>Report</h3>
         <p>Generate insightful reports on project performance, team contributions, and overall success for easy review and grading.</p>
       </div>
