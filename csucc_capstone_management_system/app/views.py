@@ -9,3 +9,6 @@ def login(request):
 
 def register(request):
     return render(request, 'public/register.html')
+
+def dashboard(request):
+    return render(request, 'public/student_dashboard.html')

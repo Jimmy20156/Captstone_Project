@@ -1,16 +1,20 @@
 
 
 
-/* General styling */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #004e92, #000428);
+* {
+  color: #333;
+}
+
+main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: linear-gradient(to right, #0b2c74, #174ea6); */
+  background-color: red;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 70px
 }
 
 /* Container */
