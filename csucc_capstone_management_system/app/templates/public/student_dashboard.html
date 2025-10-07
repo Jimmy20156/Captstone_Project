@@ -5,22 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSUCC Student Dashboard</title>
+
+  <link rel="stylesheet" href="{% static '/app/public/styles/student_dashboard.css' %}">
+  <link rel="stylesheet" href="{% static '/app/public/styles/header.css' %}">
+
   
-  <link rel="stylesheet" href="{% static '/app/public/styles/student_dashboard.css'%}">
 </head>
+<style>
+  
+
+</style>
 <body>
   <header>
-    <h1>CSUCC Capstone Management System</h1>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
     <nav>
       <ul>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#proposal">Proposal</a></li>
-        <li><a href="#progress">Progress</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#messages">Messages</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Support</a></li>
       </ul>
     </nav>
+    <a href="{% url 'register' %}" class="btn-signin">Logout</a>
   </header>
 
   <main>

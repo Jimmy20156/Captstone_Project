@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features | CSUCC Capstone System</title>
+  <link rel="stylesheet" href="{% static '/app/public/styles/features.css' %}">
+  <link rel="stylesheet" href="{% static '/app/public/styles/header.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}" >Support</a></li>
+      </ul>
+    </nav>
+    <a href="{% url 'login' %}" class="btn-signin">Sign in</a>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features-page">
+    <h1 class="page-title">Explore Our System Features</h1>
+    <p class="page-subtitle">Empowering students and faculty through collaboration, tracking, and evaluation.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/plan.png' %}" alt="Plan Icon">
+        <h3>Project Planning</h3>
+        <p>Create and manage project proposals, define team roles, and set milestones easily.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/track.png' %}" alt="Track Icon">
+        <h3>Progress Tracking</h3>
+        <p>Keep track of submissions, deadlines, and advisor feedback in one dashboard.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/evaluate.png' %}" alt="Evaluate Icon">
+        <h3>Evaluation Tools</h3>
+        <p>Evaluate projects efficiently using rubric-based grading and feedback forms.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/report.png' %}" alt="Report Icon">
+        <h3>Automated Reports</h3>
+        <p>Generate detailed reports summarizing project performance and grades.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/collaboration.png' %}" alt="Collaboration Icon">
+        <h3>Collaboration Hub</h3>
+        <p>Connect with teammates and advisers seamlessly through the built-in communication panel.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="{% static 'app/public/icons/security.png' %}" alt="Security Icon">
+        <h3>Data Security</h3>
+        <p>All data is securely stored and accessible only to authorized users.</p>
+      </div>
+    </div>
+
+    <div class="back-home">
+      <a href="{% url 'index' %}" class="btn-secondary">← Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>CSUCC Capstone System</h3>
+        <p>A platform to manage, collaborate, and evaluate capstone projects with efficiency and ease.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+          <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}" class="active">Support</a></li>
+      </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@csucc.edu</p>
+        <p>Phone: +63 912 345 6789</p>
+        <div class="socials">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CSUCC Capstone System. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

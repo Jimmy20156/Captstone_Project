@@ -19,13 +19,14 @@
     <nav>
       <ul>
         <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}" >Support</a></li>
       </ul>
     </nav>
     <a href="{% url 'login' %}" class="btn-signin">Login</a>
   </header>
+
   <main>
   <div class="login-container">
     <!-- Logo Section -->

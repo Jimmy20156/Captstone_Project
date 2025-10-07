@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSUCC Capstone System</title>
   <link rel="stylesheet" href=" {% static '/app/public/styles/style.css'%}">
+  <link rel="stylesheet" href=" {% static '/app/public/styles/header.css'%}">
   <!-- <link rel="stylesheet" href="{% static '/app/public/test.css'%}"> -->
 </head>
 <body>
@@ -16,9 +17,9 @@
     <nav>
       <ul>
         <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}" >Support</a></li>
       </ul>
     </nav>
     <a href="{% url 'login' %}" class="btn-signin">Sign in</a>
@@ -30,7 +31,7 @@
       <h1>Unlock Your Project’s <br> Full Potential</h1>
       <p>Manage, Collaborate and Evaluate with Ease</p>
       <div class="buttons">
-        <a href="#" class="btn-primary">Explore Features</a>
+        <a href="{% url 'features' %}" class="btn-primary">Explore Features</a>
         <a href="#" class="btn-secondary">Contact Us</a>
       </div>
     </div>
@@ -72,12 +73,12 @@
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
+          <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}" class="active">Support</a></li>
+      </ul>
       </div>
       <div class="footer-contact">
         <h4>Contact Us</h4>
