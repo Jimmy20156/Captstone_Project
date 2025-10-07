@@ -1,0 +1,11 @@
+<h2>Sign In</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button type="submit">Sign In</button>
+</form>
+
+{% if form.errors %}
+    <p style="color: red;">Invalid username or password.</p>
+{% endif %}
