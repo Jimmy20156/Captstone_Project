@@ -8,13 +8,13 @@ main {
 
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 70px
+  padding: 40px;
 }
 
 /* Container */
 .login-container {
   background: #fff;
-  padding: 30px 25px;
+  padding: 10px 20px;
   border-radius: 10px;
   width: 350px;
   box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
@@ -23,9 +23,9 @@ main {
 
 /* Logo */
 .logo img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
+  width: 200px;
+  height: 150px;
+
 }
 
 /* Title */
@@ -94,4 +94,17 @@ button:hover {
 
 .note a:hover {
   text-decoration: underline;
+}
+
+
+.role-group {
+  display: flex;
+  gap: 25px;
+  color: rgb(24, 132, 239);
+  padding: 10px;
+}
+
+.role-radio {
+  accent-color: #004e92; /* changes radio button color */
+  cursor: pointer;
 }

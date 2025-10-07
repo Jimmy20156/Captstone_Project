@@ -27,7 +27,7 @@
   <main>
     <div class="login-container">
       <div class="logo">
-        <img src="{% static '/app/public/images/csucc-logo.png' %}" alt="CSUCC Logo">
+        <img src="{% static '/app/public/images/logo.png' %}" alt="CSUCC Logo">
       </div>
 
       <h2>CSUCC Capstone Registration</h2>
@@ -50,10 +50,14 @@
           {{ form.password }}
         </div>
 
-        <div class="input-group">
+        <!-- <div class="input-group">
           <label>Role</label>
           {{ form.role }}
+        </div> -->
+        <div class="role-group">
+          {{ form.role }}
         </div>
+
 
         <button type="submit" class="btn-primary">Register</button>
       </form>
