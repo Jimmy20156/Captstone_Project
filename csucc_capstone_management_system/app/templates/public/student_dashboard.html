@@ -26,18 +26,20 @@
         <li><a href="#">Support</a></li>
       </ul>
 
+      
+
+    </nav>
       {% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}!</p>
-        <a href="{% url 'logout' %}">Logout</a>
+        <a class="btn-signin" href="{% url 'logout' %}">Logout</a>
       {% else %}
         <a href="{% url 'login' %}">Login</a>
       {% endif %}
-
-    </nav>
-    <a href="{% url 'register' %}" class="btn-signin">Logout</a>
   </header>
-
+{% if user.is_authenticated %}
+        <h1 style="text-align: start; padding: 5px;">Welcome, {{ user.username }}!</h1>
+        {% endif %}
   <main>
+    
     <!-- Dashboard Section -->
     <section id="dashboard" class="card">
       <h2>Dashboard</h2>
