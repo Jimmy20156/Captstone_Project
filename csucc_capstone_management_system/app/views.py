@@ -40,7 +40,7 @@ def register(request):
             return redirect('login')  # or wherever you want to go next
     else:
         form = SignUpForm()
-    return render(request, 'public/test_register.html', {'form': form})
+    return render(request, 'public/register.html', {'form': form})
 
 @login_required
 def dashboard(request):
