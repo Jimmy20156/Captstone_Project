@@ -53,6 +53,9 @@ def features(request):
 def projects(request):
     return render(request, 'public/projects.html')
 
+def contact(request):
+    return render(request, 'public/contact.html')
+
 def support(request):
     return render(request, 'public/support.html')
 def signout(request):

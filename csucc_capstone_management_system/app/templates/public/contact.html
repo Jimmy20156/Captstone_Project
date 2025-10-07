@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CSUCC Capstone System</title>
+  <link rel="stylesheet" href="{% static '/app/public/styles/contact.css' %}">
+<link rel="stylesheet" href=" {% static '/app/public/styles/header.css'%}">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}">Support</a></li>
+
+      </ul>
+    </nav>
+    <a href="{% url 'login' %}" class="btn-signin">Sign in</a>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-page">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Send us your questions, feedback, or technical concerns below.</p>
+
+      <form class="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Type your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Our Contact Information</h2>
+        <p><strong>Email:</strong> support@csucc.edu</p>
+        <p><strong>Phone:</strong> +63 912 345 6789</p>
+        <p><strong>Address:</strong> Caraga State University, Cabadbaran Campus</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>CSUCC Capstone System</h3>
+        <p>A platform to manage, collaborate, and evaluate capstone projects with efficiency and ease.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'features' %}">Features</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'support' %}">Support</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@csucc.edu</p>
+        <p>Phone: +63 912 345 6789</p>
+        <div class="socials">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CSUCC Capstone System. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
