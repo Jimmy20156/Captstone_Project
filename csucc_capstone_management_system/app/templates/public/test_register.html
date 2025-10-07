@@ -1,5 +1,69 @@
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign Up</button>
-</form>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUCC Capstone Registration</title>
+  <link rel="stylesheet" href="{% static '/app/public/styles/register.css' %}">
+  <link rel="stylesheet" href="{% static '/app/public/styles/header.css' %}">
+</head>
+<body>
+
+  <header>
+    <div class="logo">CSUCC <span>Capstone System</span></div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'features' %}">Features</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'support' %}">Support</a></li>
+      </ul>
+    </nav>
+    <a href="{% url 'login' %}" class="btn-signin">Login</a>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <div class="logo">
+        <img src="{% static '/app/public/images/csucc-logo.png' %}" alt="CSUCC Logo">
+      </div>
+
+      <h2>CSUCC Capstone Registration</h2>
+
+      <form method="post">
+        {% csrf_token %}
+        
+        <div class="input-group">
+          <label for="{{ form.username.id_for_label }}">Username</label>
+          {{ form.username }}
+        </div>
+
+        <div class="input-group">
+          <label for="{{ form.email.id_for_label }}">Email</label>
+          {{ form.email }}
+        </div>
+
+        <div class="input-group">
+          <label for="{{ form.password.id_for_label }}">Password</label>
+          {{ form.password }}
+        </div>
+
+        <div class="input-group">
+          <label>Role</label>
+          {{ form.role }}
+        </div>
+
+        <button type="submit" class="btn-primary">Register</button>
+      </form>
+
+      {% if form.errors %}
+        <p style="color: red;">Please correct the highlighted fields.</p>
+      {% endif %}
+
+      <p class="note">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+  </main>
+</body>
+</html>
