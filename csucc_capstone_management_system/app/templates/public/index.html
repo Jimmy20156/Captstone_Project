@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSUCC Capstone System</title>
-  <link rel="stylesheet" href=" {% static 'app/public/styles/styles.css'%}">
+  <link rel="stylesheet" href=" {% static '/app/public/styles/style.css'%}">
+  <!-- <link rel="stylesheet" href="{% static '/app/public/test.css'%}"> -->
 </head>
 <body>
   <!-- Navbar -->
@@ -34,7 +35,7 @@
       </div>
     </div>
     <div class="hero-img">
-      <img src="/Frontend/images/collab.png" alt="Team collaborating">
+      <img src="{% static 'app/public/images/collab.png'%}" alt="Team collaborating">
     </div>
   </section>
    <section id="features" class="features">
