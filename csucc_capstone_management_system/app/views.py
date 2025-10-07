@@ -15,18 +15,18 @@ def index(request):
 def signin(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
+        # form = SignInForm(request, data=request.POST or None)
         if form.is_valid():
             user = form.get_user()
             login(request, user)
 
-            # 👇 Respect ?next= parameter
             next_url = request.POST.get('next') or request.GET.get('next') or '/dashboard/'
             return redirect(next_url)
     else:
         form = AuthenticationForm()
 
     # 👇 Pass the ?next= value to the template
-    return render(request, 'public/test_login.html', {
+    return render(request, 'public/login.html', {
         'form': form,
         'next': request.GET.get('next', ''),
     })
